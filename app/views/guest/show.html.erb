@@ -1,0 +1,15 @@
+<h2 style="text-align: center"><%=@guest.name%></h2><br>
+<h4 style="text-align: center"><%=@guest.description%></h4>
+<br><br>
+
+<div class="container-fluid px-0">
+  <div class="row">
+    <% @guest.media.each do |media| %>
+    <div class="col-md-6 padding-0 text-center">
+      <h5><%=media.name%></h5>
+      <p style = "font-family: 'Source Sans Pro', sans-serif;"><%=media.description%></p>
+      <%= media.url.html_safe %>
+    </div>
+    <% end %>
+  </div>
+</div>

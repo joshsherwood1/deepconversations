@@ -1,0 +1,33 @@
+<div class="jumbotron">
+  <h2>Supporting LGBTQ people, Atheists and the Critics & Victims of Authoritarianism/Fundamentalism</h2>
+  <p>by telling their must-hear stories</p>
+  ​
+  <button type="button" class="btn btn-success"
+  data-toggle="button" aria-pressed="false" autocomplete="off" onclick = "window.location.href = '/about';"> Learn More </button>
+</div>
+<h2>Hosts</h2>
+<br>
+<div class="container-fluid px-0">
+  <div class="row">
+    <% @hosts.each do |host| %>
+    <div class="col-md-4 padding-0">
+      <h2><%=link_to host.name, "/host/#{host.id}"%></h2>
+      <p style = "font-family: 'Source Sans Pro', sans-serif;"><%=host.description%></p>
+    </div>
+    <% end %>
+  </div>
+</div>
+<br>
+<br>
+<h2>Guests</h2>
+<br>
+<div class="container-fluid px-0">
+  <div class="row">
+    <% @guests.each do |guest| %>
+    <div class="col-md-4 padding-0">
+      <h2><%=link_to guest.name, "/guest/#{guest.id}"%></h2>
+      <p style = "font-family: 'Source Sans Pro', sans-serif;"><%=guest.description%></p>
+    </div>
+    <% end %>
+  </div>
+</div>
