@@ -1,15 +1,26 @@
 <div class="jumbotron">
-  <img src="https://user-images.githubusercontent.com/49769068/82523349-9f61bd00-9af1-11ea-914b-c2c1b7c24f74.png" alt="" height="400" width="700">
-  <p>Archiving the conversations that make me think and expand my world</p>
+  <div class="container-fluid px-0">
+  <div class="row">
+    <div class="col-md-6 padding-0" style="text-align:center">
+      <img src="https://user-images.githubusercontent.com/49769068/82523349-9f61bd00-9af1-11ea-914b-c2c1b7c24f74.png" alt="" height="280" width="500">
+    </div>
+    <div class="col-md-6 padding-0">
+      <p class="jumbotron_text" style="text-align:center">I am archiving the conversations that make me think and expand my world. I have found a common trait among all of the people archived on this website: they reject fundamentalism, whether it's Christian, Islamic, Regressive Leftist, or otherwise. They can have a difference of opinion without calling each other evil -- a stark contrast to the conservative Christian environment I lived in during my childhood, where Christians taught that anyone who disagrees with them is sinful and corrupt. These people on the website have fastly different politcial and religious beliefs but can generate beautiful conversations about what's going on in the world and not see the other person as immoral. It's wonderful to behold, and I hope you get as much out of their conversations as I have. Enjoy! </p>
+    </div>
+  </div>
 </div>
+</div>
+
+
+
 <h2>Hosts</h2>
 <br>
 <div class="container-fluid px-0">
   <div class="row">
     <% @hosts.each do |host| %>
     <div class="col-md-4 padding-0">
-      <h2><%=link_to host.name, "/host/#{host.id}"%></h2>
-      <p style = "font-family: 'Source Sans Pro', sans-serif;"><%=host.description%></p>
+      <h2 style="text-align:center"><%=link_to host.name, "/host/#{host.id}"%></h2>
+      <p style = "font-family: 'Source Sans Pro', sans-serif; text-align:center"><%=host.description%></p>
     </div>
     <% end %>
   </div>
@@ -22,8 +33,8 @@
   <div class="row">
     <% @guests.each do |guest| %>
     <div class="col-md-4 padding-0">
-      <h2><%=link_to guest.name, "/guest/#{guest.id}"%></h2>
-      <p style = "font-family: 'Source Sans Pro', sans-serif;"><%=guest.description%></p>
+      <h2 style="text-align:center"><%=link_to guest.name, "/guest/#{guest.id}"%></h2>
+      <p style = "font-family: 'Source Sans Pro', sans-serif; text-align:center"><%=guest.description%></p>
     </div>
     <% end %>
   </div>
