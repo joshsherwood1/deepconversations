@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2020_05_20_173923) do
   create_table "guests", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

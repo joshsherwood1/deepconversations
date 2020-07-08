@@ -3,7 +3,7 @@ class CreateGuests < ActiveRecord::Migration[5.2]
     create_table :guests do |t|
       t.string :name
       t.string :description
-
+      t.string :url
       t.timestamps
     end
   end
