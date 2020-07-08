@@ -1,18 +1,23 @@
-<div class="jumbotron">
-  <div class="container-fluid px-0">
+<br>
+<div class="container-fluid px-0">
   <div class="row">
-    <div class="col-md-6 padding-0" style="text-align:center">
-      <img src="https://user-images.githubusercontent.com/49769068/82523349-9f61bd00-9af1-11ea-914b-c2c1b7c24f74.png" alt="" height="280" width="500">
+    <% @guests.each do |guest| %>
+    <div class="col-md-4 padding-0">
+      <div class="card">
+        <div class="card-header"><h2 style="text-align:center"><%=link_to guest.name, "/guest/#{guest.id}"%></h2></div>
+        <div class="card-body">
+      <%= guest.url.html_safe %>
+      <p style = "font-family: 'Source Sans Pro', sans-serif; text-align:center"><%=guest.description%></p>
+      </div>
     </div>
-    <div class="col-md-6 padding-0">
-      <p class="jumbotron_text" style="text-align:center">I am archiving the conversations that make me think and expand my world. I have found a common trait among all of the people archived on this website: they reject fundamentalism, whether it's Christian, Islamic, Regressive Leftist, or otherwise. They have fastly different politcial and religious beliefs and always have differences of opinion, but can generate beautiful conversations about what's going on in the world and not call each other evil. It's wonderful to behold, and I hope you get as much out of their conversations as I have. Enjoy!.</p>
+    <br>
+    <br>
     </div>
+    <% end %>
   </div>
 </div>
-</div>
-
-
-
+<br>
+<br>
 <h2>Hosts</h2>
 <br>
 <div class="container-fluid px-0">
@@ -25,18 +30,17 @@
     <% end %>
   </div>
 </div>
-<br>
-<br>
-<h2>Guests</h2>
-<br>
-<div class="container-fluid px-0">
+
+
+<div class="jumbotron">
+  <div class="container-fluid px-0">
   <div class="row">
-    <% @guests.each do |guest| %>
-    <div class="col-md-4 padding-0">
-      <h2 style="text-align:center"><%=link_to guest.name, "/guest/#{guest.id}"%></h2>
-      <%= guest.url.html_safe %>
-      <p style = "font-family: 'Source Sans Pro', sans-serif; text-align:center"><%=guest.description%></p>
+    <div class="col-md-6 padding-0" style="text-align:center">
+      <img src="https://user-images.githubusercontent.com/49769068/82523349-9f61bd00-9af1-11ea-914b-c2c1b7c24f74.png" alt="" height="280" width="500">
     </div>
-    <% end %>
+    <div class="col-md-6 padding-0">
+      <p class="jumbotron_text" style="text-align:center">I am archiving the conversations that make me think and expand my world. I have found a common trait among all of the people archived on this website: they reject fundamentalism, whether it's Christian, Regressive Leftist/woke, Islamic, or otherwise. They have fastly different politcial and religious beliefs and always have differences of opinion, but can generate beautiful conversations about what's going on in the world and not call each other evil. It's wonderful to behold, and I hope you get as much out of their conversations as I have. Enjoy!</p>
+    </div>
   </div>
+</div>
 </div>
