@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_05_20_173923) do
     t.string "name"
     t.string "description"
     t.string "url"
+    t.string "tags"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

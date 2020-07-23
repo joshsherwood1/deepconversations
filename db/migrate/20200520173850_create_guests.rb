@@ -4,6 +4,7 @@ class CreateGuests < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :description
       t.string :url
+      t.string :tags
       t.timestamps
     end
   end
