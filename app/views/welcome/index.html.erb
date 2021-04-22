@@ -1,3 +1,14 @@
+<h2>Topics</h2>
+<br>
+<div class="container-fluid px-0">
+  <div class="row">
+    <% @tags.each do |tag| %>
+    <div class="col-md-4 padding-0">
+      <h2 style="text-align:center"><%=link_to tag.name, "/tag/#{tag.id}"%></h2>
+    </div>
+    <% end %>
+  </div>
+</div>
 <br>
 <div class="container-fluid px-0">
   <div class="row">
@@ -19,18 +30,6 @@
 </div>
 <br>
 <br>
-<h2>Hosts</h2>
-<br>
-<div class="container-fluid px-0">
-  <div class="row">
-    <% @hosts.each do |host| %>
-    <div class="col-md-4 padding-0">
-      <h2 style="text-align:center"><%=link_to host.name, "/host/#{host.id}"%></h2>
-      <p style = "font-family: 'Source Sans Pro', sans-serif; text-align:center"><%=host.description%></p>
-    </div>
-    <% end %>
-  </div>
-</div>
 
 
 <div class="jumbotron">
@@ -40,7 +39,7 @@
       <img src="https://user-images.githubusercontent.com/49769068/82523349-9f61bd00-9af1-11ea-914b-c2c1b7c24f74.png" alt="" height="280" width="500">
     </div>
     <div class="col-md-6 padding-0">
-      <p class="jumbotron_text" style="text-align:center">I am archiving the conversations that make me think and expand my world. I have found a common trait among all of the people archived on this website: they reject fundamentalism, whether it's Christian, Regressive Leftist/woke, Islamic, or otherwise. They have fastly different politcial and religious beliefs and always have differences of opinion, but can generate beautiful conversations about what's going on in the world and not call each other evil. It's wonderful to behold, and I hope you get as much out of their conversations as I have. Enjoy!</p>
+      <p class="jumbotron_text" style="text-align:center">I am archiving the conversations that make me think and expand my world. I have found a common trait among all of the people archived on this website: they reject fundamentalism, whether it's Christian, Woke, Islamic, or otherwise. They have fastly different politcial and religious beliefs and always have differences of opinion, but can generate beautiful conversations about what's going on in the world and not call each other evil. It's wonderful to behold, and I hope you get as much out of their conversations as I have. Enjoy!</p>
     </div>
   </div>
 </div>

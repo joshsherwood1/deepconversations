@@ -1,10 +1,9 @@
-<h2 style="text-align: center"><%=@host.name%></h2><br>
-<h4 style="text-align: center"><%=@host.description%></h4>
+<h4 style="text-align: center"><%=@tag.name%></h4>
 <br><br>
 
 <div class="container-fluid px-0">
   <div class="row">
-    <% @host.media.each do |media| %>
+    <% @media_with_tag.each do |media| %>
     <div class="col-md-6 padding-0 text-center">
       <h5><%=media.name%></h5>
       <p style = "font-family: 'Source Sans Pro', sans-serif;"><%=media.description%></p>
